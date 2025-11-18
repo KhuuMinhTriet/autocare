@@ -100,7 +100,7 @@ const Header = async () => {
                     </SignedOut>
 
                     <SignedIn>
-                        <UserButton appearance={{ elements: { avatarBox: { width: '3rem', height: '3rem' } } }} />
+                        <UserButton appearance={{ elements: { avatarBox: { width: '3rem', height: '3rem' } } }} userProfileMode='navigation' userProfileUrl={`/user/${user?.id}`} />
                     </SignedIn>
                 </div>
             </div>
