@@ -2,6 +2,7 @@ import { checkUser } from '@/lib/checkUser';
 import { redirect } from 'next/navigation';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import React from 'react'
+import AccountVehicles from '../_components/vehicles';
 
 const UserProfilePage = async () => {
 
@@ -131,7 +132,9 @@ const UserProfilePage = async () => {
                         </div>
                     </div>
                 </div></TabsContent>
-                <TabsContent value="vehicles">Placeholder for vehicles.</TabsContent>
+                <TabsContent value="vehicles" className='mx-auto max-w-3xl'>
+                    <AccountVehicles />
+                </TabsContent>
             </Tabs>
 
         </div>
