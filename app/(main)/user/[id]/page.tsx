@@ -132,7 +132,7 @@ const UserProfilePage = async () => {
                         </div>
                     </div>
                 </div></TabsContent>
-                <TabsContent value="vehicles" className='mx-auto max-w-3xl'>
+                <TabsContent value="vehicles" className='mx-auto max-w-5xl'>
                     <AccountVehicles />
                 </TabsContent>
             </Tabs>
