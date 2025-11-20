@@ -85,7 +85,7 @@ const Header = async () => {
 
                         className="bg-blue-600 hover:bg-blue-700"
                     >
-                        Book Now
+                        <Link href='/booking'>Book Now</Link>
                     </Button>
                 )}
 
