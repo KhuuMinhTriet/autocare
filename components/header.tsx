@@ -76,8 +76,8 @@ const Header = async () => {
 
                             className="bg-purple-600 hover:bg-purple-700"
                         >
-                            <Shield className="w-4 h-4 mr-2" />
-                            Admin Dashboard
+                            <Link href='/admin' className='flex items-center'><Shield className="w-4 h-4 mr-2" />
+                                Admin Dashboard</Link>
                         </Button>
                     </div>
                 ) : (

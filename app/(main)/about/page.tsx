@@ -56,7 +56,7 @@ const AboutPage = () => {
     ];
 
     return (
-        <div className='min-h-screen flex flex-col bg-gray-50 mt-20'>
+        <div className='min-h-screen flex flex-col bg-gray-50'>
             <main className="grow">
                 {/* Hero Section */}
                 <section className="bg-linear-to-r from-blue-600 to-blue-800 text-white py-20">
