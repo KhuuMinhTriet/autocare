@@ -18,11 +18,8 @@ export default function RootLayout({
   return (
     <ClerkProvider appearance={{ theme: shadesOfPurple }}>
       <html lang="en">
-        <body
-        >
-          <Header />
+        <body>
           {children}
-          <Footer />
         </body>
       </html>
     </ClerkProvider>

@@ -57,7 +57,7 @@ const ServicesPage = async () => {
     ];
 
     return (
-        <div className="min-h-screen pt-24 pb-20">
+        <div className="min-h-screen pt-24">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h1 className="text-5xl mb-4">Our Services</h1>

@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 import { checkUser } from '@/lib/checkUser'
 
-const Header = async () => {
+const Header = async ({ isAdminPage = false }) => {
     const user = await checkUser();
     const isAdmin = user?.role === 'ADMIN'
 
@@ -28,47 +28,49 @@ const Header = async () => {
                         <img src={'/logo.png'} className='max-h-14' /></Link>
                 </div>
 
-                <nav className="hidden md:flex items-center gap-8">
-                    <Link href='/'><button
+                {!isAdminPage && (
+                    <nav className="hidden md:flex items-center gap-8">
+                        <Link href='/'><button
 
-                        className="text-gray-700 hover:text-blue-600 transition-colors"
-                    >
-                        Home
-                    </button></Link>
-                    <Link href='/about'><button
-
-                        className={"text-gray-700 hover:text-blue-600 transition-colors"}
-                    >
-                        About
-                    </button></Link>
-                    <Link href='/services'>
-                        <button
+                            className="text-gray-700 hover:text-blue-600 transition-colors"
+                        >
+                            Home
+                        </button></Link>
+                        <Link href='/about'><button
 
                             className={"text-gray-700 hover:text-blue-600 transition-colors"}
                         >
-                            Services
+                            About
                         </button></Link>
-                    <Link href='/products'>
-                        <button
+                        <Link href='/services'>
+                            <button
+
+                                className={"text-gray-700 hover:text-blue-600 transition-colors"}
+                            >
+                                Services
+                            </button></Link>
+                        <Link href='/products'>
+                            <button
+
+                                className={"text-gray-700 hover:text-blue-600 transition-colors"}
+                            >
+                                Products
+                            </button></Link>
+                        <Link href='/team'>
+                            <button
+
+                                className={"text-gray-700 hover:text-blue-600 transition-colors"}
+                            >
+                                Team
+                            </button></Link>
+                        <Link href='/contact'><button
 
                             className={"text-gray-700 hover:text-blue-600 transition-colors"}
                         >
-                            Products
+                            Contact
                         </button></Link>
-                    <Link href='/team'>
-                        <button
-
-                            className={"text-gray-700 hover:text-blue-600 transition-colors"}
-                        >
-                            Team
-                        </button></Link>
-                    <Link href='/contact'><button
-
-                        className={"text-gray-700 hover:text-blue-600 transition-colors"}
-                    >
-                        Contact
-                    </button></Link>
-                </nav>
+                    </nav>
+                )}
 
                 {isAdmin ? (
                     <div>
